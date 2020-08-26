@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+<html>
+
+<head>
+	<meta charset="utf-8" />
+
+	<style>
+		body {
+			background-color: #222222;
+			font-size: 24px;
+			color: white;
+		}
+	</style>
+
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+
+	<script type="text/javascript">
+
+		let number = Math.floor(Math.random() * 5) + 1;
+
+		let timer1 = 0;
+		let timer2 = 0;
+
+		const setSlide = (slideNumber) => {
+			clearTimeout(timer1);
+			clearTimeout(timer2);
+			number = slideNumber - 1;
+
+			hide();
+			setTimeout("changeSlide()", 500);
+
+		}
+
+		const hide = () => {
+			$("#slider").fadeOut(500);
+		}
+
+		const changeSlide = () => {
+			number++; if (number > 5) number = 1;
+
+			let file = `<img src=\"slajdy/slajd${number}.png\" />`;
+
+			document.getElementById("slider").innerHTML = file;
+			$("#slider").fadeIn(500);
+
+			timer1 = setTimeout("changeSlide()", 5000);
+			timer2 = setTimeout("hide()", 4500);
+
+		}
+
+	</script>
+
+</head>
+
+<body onload="changeSlide()">
+
+	<span onclick=setSlide(1) style="cursor:pointer;">[ 1 ]</span>
+	<span onclick=setSlide(2) style="cursor:pointer;">[ 2 ]</span>
+	<span onclick=setSlide(3) style="cursor:pointer;">[ 3 ]</span>
+	<span onclick=setSlide(4) style="cursor:pointer;">[ 4 ]</span>
+	<span onclick=setSlide(5) style="cursor:pointer;">[ 5 ]</span>
+
+	<div id="slider"></div>
+
+</body>
+
+</html>

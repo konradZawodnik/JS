@@ -100,3 +100,12 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+if (window.innerWidth <= 767) {
+  window.addEventListener("scroll", function () {
+    let scrolled = window.scrollY;
+    let parallax = document.querySelector(".parallax");
+
+    parallax.style.backgroundPosition = `center ${scrolled * 0.5}px`;
+  });
+}

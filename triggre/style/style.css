@@ -1,0 +1,80 @@
+.container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#initBtn,
+#destroyBtn,
+#doneBtn,
+#failBtn {
+    background-color: #c0c0c0;
+    border: solid 2px #000000;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+#initBtn:hover,
+#destroyBtn:hover,
+#doneBtn:hover,
+#failBtn:hover {
+    background-color: #ffffff;
+}
+
+#info {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#root {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    &> :nth-child(2) {
+        background-color: #ffffff;
+    }
+    &>div {
+        align-items: center;
+        border: solid 2px #000000;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem;
+        &>div {
+            border: solid 2px #000000;
+            padding: 3rem;
+        }
+    }
+    &>div:hover {
+        font-weight: bold;
+        text-decoration: underline;
+    }
+}
+
+.widget-initializing {
+    background: #ffff00;
+    cursor: pointer;
+}
+
+.widget-initialized {
+    background-color: #90ee90;
+    cursor: pointer;
+}
+
+.widget-destroyed {
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+.widget-done {
+    background-color: #add8e6;
+    cursor: pointer;
+}
+
+.widget-failed {
+    background-color: #f08080;
+    cursor: pointer;
+}

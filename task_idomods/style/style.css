@@ -142,7 +142,7 @@ html {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -204,18 +204,18 @@ html {
 .medicine-image {
     height: 100%;
     margin-left: 50px;
+    padding-bottom: 100px;
     max-height: 867px;
     max-width: 42vw;
     width: 100%;
     @media screen and (max-width: 769px) {
         margin-left: 0;
         max-width: 75%;
-        padding-bottom: 100px;
+        padding-bottom: 50px;
     }
     @media screen and (min-width: 769.01px) and (max-width: 1250px) {
-        margin-bottom: 100px;
         margin-left: 0;
-        max-width: 75%;
+        max-width: 42vw;
     }
 }
 
@@ -230,7 +230,7 @@ html {
         display: flex;
         flex-direction: column;
     }
-    @media screen and (min-width: 768.01px) and (max-width: 1260px) {
+    @media screen and (min-width: 768.01px) and (max-width: 1250px) {
         display: flex;
         flex-direction: column;
         margin-bottom: 120px;
@@ -828,6 +828,9 @@ html {
                 flex-direction: column;
                 height: 100%;
                 text-align: center;
+            }
+            @media screen and (min-width: 1250px) and (max-width: 1260px) {
+                margin-right: 9px;
             }
             @media screen and (min-width: 1700px) {
                 white-space: nowrap;

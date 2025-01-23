@@ -105,23 +105,56 @@ html {
     }
 }
 
+.mobile-tablet-images-container {
+    @media screen and (min-width: 1200px) {
+        display: none;
+    }
+    @media screen and (max-width: 1199.99px) {
+        align-items: center;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+    }
+    .package {
+        @media screen and (max-width: 1199.99px) {
+            height: auto;
+            position: relative;
+            max-width: 50%;
+            width: auto;
+        }
+    }
+    .dog {
+        @media screen and (max-width: 1199.99px) {
+            position: absolute;
+            transform: translate(0%, 104%);
+            height: auto;
+            max-width: 75%;
+            width: 100%;
+            z-index: 1;
+        }
+    }
+}
+
 .parallax {
     background-image: url("../images/Dog.png");
-    height: 700px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
     opacity: 50%;
+    position: relative;
     @media screen and (min-width: 768px) {
-        .parallax {
-            background-attachment: fixed;
-        }
+        background-attachment: fixed;
     }
     @media screen and (max-width: 767px) {
-        .parallax {
-            background-attachment: scroll;
-        }
+        background-attachment: scroll;
     }
 }
 
@@ -175,12 +208,14 @@ html {
     max-width: 42vw;
     width: 100%;
     @media screen and (max-width: 769px) {
-        max-width: 45%;
+        margin-left: 0;
+        max-width: 75%;
         padding-bottom: 100px;
     }
     @media screen and (min-width: 769.01px) and (max-width: 1250px) {
         margin-bottom: 100px;
-        max-width: 45%;
+        margin-left: 0;
+        max-width: 75%;
     }
 }
 
@@ -252,14 +287,17 @@ html {
         }
         @media screen and (min-width: 768.01px) and (max-width: 1200px) {
             font-size: 26px;
+            white-space: nowrap;
         }
         @media screen and (max-width: 768px) {
             font-size: 20px;
             text-align: center;
+            white-space: nowrap;
         }
         @media screen and (max-width: 480px) {
             font-size: 18px;
             text-align: center;
+            white-space: nowrap;
         }
     }
     .right-distinction-container {
@@ -292,13 +330,16 @@ html {
         text-decoration-skip-ink: none;
         width: 100%;
         @media screen and (max-width: 1250px) {
+            min-width: 550px;
             text-align: center;
         }
         @media screen and (max-width: 768px) {
+            min-width: 440px;
             text-align: center;
         }
         @media screen and (max-width: 480px) {
             font-size: 16px;
+            min-width: 240px;
             text-align: center;
         }
     }
@@ -604,6 +645,7 @@ html {
         display: none;
     }
     @media screen and (max-width: 1200px) {
+        align-items: center;
         background-color: #ffffff;
         display: flex;
         flex-direction: column;
@@ -619,6 +661,7 @@ html {
             height: 149px;
             justify-content: center;
             padding-top: 5px;
+            width: 100%;
             .heading {
                 font-family: Futura PT;
                 font-size: 26px;
@@ -650,7 +693,6 @@ html {
             @media screen and (max-width: 768.01px) {
                 font-size: 18px;
             }
-            padding-left: 50px;
             padding-bottom: 10px;
             .circle-text-container {
                 align-items: center;
@@ -669,6 +711,9 @@ html {
                     justify-content: center;
                     opacity: 0px;
                     margin-right: 40px;
+                    @media screen and (max-width: 400px) {
+                        margin-right: 20px;
+                    }
                     margin-bottom: 10px;
                     width: 46px;
                 }
@@ -682,36 +727,11 @@ html {
     height: 100%;
     margin-bottom: 60px;
     margin-top: 60px;
+    padding-bottom: 0;
     width: 100%;
-    @media screen and (max-width: 350px) {
-        margin-top: 0px;
-        max-height: 3943px;
-        padding-bottom: 820px;
-    }
-    @media screen and (min-width: 350.01px) and (max-width: 400px) {
-        margin-top: 0px;
-        max-height: 3943px;
-        padding-bottom: 650px;
-    }
-    @media screen and (min-width: 400.01px) and (max-width: 500px) {
-        margin-top: 0px;
-        max-height: 3943px;
-        padding-bottom: 400px;
-    }
-    @media screen and (min-width: 500.01px) and (max-width: 600px) {
-        margin-top: 0px;
-        padding-bottom: 450px;
-    }
-    @media screen and (min-width: 600.01px) and (max-width: 700px) {
-        margin-top: 0px;
-        padding-bottom: 500px;
-    }
-    @media screen and (min-width: 700.01px) and (max-width: 768px) {
-        margin-top: 0px;
-        padding-bottom: 550px;
-    }
-    @media screen and (min-width: 768.01px) and (max-width: 1199.99px) {
-        padding-bottom: 700px;
+    @media screen and (max-width: 1200px) {
+        margin-bottom: 0;
+        margin-top: 0;
     }
     .ingredients-header {
         align-items: center;
@@ -836,7 +856,10 @@ html {
                             text-align: center;
                             text-underline-position: from-font;
                             text-decoration-skip-ink: none;
-                            @media screen and (max-width: 1200px) {
+                            @media screen and (max-width: 400px) {
+                                font-size: 16px;
+                            }
+                            @media screen and (min-width: 400.01px) and (max-width: 1200px) {
                                 font-size: 18px;
                             }
                         }
@@ -956,7 +979,10 @@ html {
                             text-align: center;
                             text-underline-position: from-font;
                             text-decoration-skip-ink: none;
-                            @media screen and (max-width: 768px) {
+                            @media screen and (max-width: 400px) {
+                                font-size: 16px;
+                            }
+                            @media screen and (min-width: 400.01px) and (max-width: 768px) {
                                 font-size: 18px;
                             }
                         }
@@ -1036,7 +1062,10 @@ html {
                         text-align: center;
                         text-underline-position: from-font;
                         text-decoration-skip-ink: none;
-                        @media screen and (max-width: 1200px) {
+                        @media screen and (max-width: 400px) {
+                            font-size: 16px;
+                        }
+                        @media screen and (min-width: 400.01px) and (max-width: 1200px) {
                             font-size: 18px;
                         }
                     }
@@ -1085,6 +1114,7 @@ html {
                     height: auto;
                     width: auto;
                     position: relative;
+                    top: 125px;
                     @media screen and (max-width: 1199.99px) {
                         display: none;
                     }
@@ -1108,7 +1138,7 @@ html {
                     text-align: center;
                     text-underline-position: from-font;
                     text-decoration-skip-ink: none;
-                    transform: translate(-18px, -510px);
+                    transform: translate(-18px, -385px);
                     width: 100%;
                     z-index: 2;
                     @media screen and (max-width: 1199.99px) {
@@ -1120,42 +1150,13 @@ html {
                 }
                 .dog {
                     position: absolute;
-                    bottom: 0;
-                    right: 47px;
+                    bottom: 0px;
+                    right: 25px;
                     height: auto;
                     width: 100%;
                     z-index: 1;
                     @media screen and (max-width: 1199.99px) {
                         display: none;
-                    }
-                }
-            }
-            .mobile-tablet-images-container {
-                @media screen and (min-width: 1200px) {
-                    display: none;
-                }
-                @media screen and (max-width: 1199.99px) {
-                    align-items: center;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                }
-                .package {
-                    @media screen and (max-width: 1199.99px) {
-                        height: auto;
-                        position: relative;
-                        max-width: 30%;
-                        width: auto;
-                    }
-                }
-                .dog {
-                    @media screen and (max-width: 1199.99px) {
-                        position: relative;
-                        transform: translate(0%, -153%);
-                        height: auto;
-                        max-width: 35%;
-                        width: 100%;
-                        z-index: 1;
                     }
                 }
             }
@@ -1191,7 +1192,10 @@ html {
                             text-align: center;
                             text-underline-position: from-font;
                             text-decoration-skip-ink: none;
-                            @media screen and (max-width: 1200px) {
+                            @media screen and (max-width: 400px) {
+                                font-size: 16px;
+                            }
+                            @media screen and (min-width: 400.01px) and (max-width: 1200px) {
                                 font-size: 18px;
                             }
                         }
@@ -1205,9 +1209,11 @@ html {
                             text-decoration-skip-ink: none;
                             @media screen and (min-width: 768.01px) and (max-width: 1200px) {
                                 font-size: 26px;
+                                line-height: normal;
                             }
                             @media screen and (max-width: 768px) {
                                 font-size: 20px;
+                                line-height: normal;
                             }
                         }
                     }
@@ -1259,7 +1265,10 @@ html {
                         text-align: center;
                         text-underline-position: from-font;
                         text-decoration-skip-ink: none;
-                        @media screen and (max-width: 1200px) {
+                        @media screen and (max-width: 400px) {
+                            font-size: 16px;
+                        }
+                        @media screen and (min-width: 400.01px) and (max-width: 1200px) {
                             font-size: 18px;
                         }
                     }
@@ -1331,7 +1340,10 @@ html {
                         text-align: center;
                         text-underline-position: from-font;
                         text-decoration-skip-ink: none;
-                        @media screen and (max-width: 1200px) {
+                        @media screen and (max-width: 400px) {
+                            font-size: 16px;
+                        }
+                        @media screen and (min-width: 400.01px) and (max-width: 1200px) {
                             font-size: 18px;
                         }
                     }
@@ -1380,7 +1392,10 @@ html {
                             text-align: center;
                             text-underline-position: from-font;
                             text-decoration-skip-ink: none;
-                            @media screen and (max-width: 1200px) {
+                            @media screen and (max-width: 400px) {
+                                font-size: 16px;
+                            }
+                            @media screen and (min-width: 400.01px) and (max-width: 1200px) {
                                 font-size: 18px;
                             }
                         }
@@ -1466,7 +1481,10 @@ html {
                         text-align: center;
                         text-underline-position: from-font;
                         text-decoration-skip-ink: none;
-                        @media screen and (max-width: 1200px) {
+                        @media screen and (max-width: 400px) {
+                            font-size: 16px;
+                        }
+                        @media screen and (min-width: 400.01px) and (max-width: 1200px) {
                             font-size: 18px;
                         }
                     }
@@ -1609,6 +1627,9 @@ html {
         @media screen and (max-width: 768px) {
             flex-direction: column;
             text-align-last: center;
+        }
+        @media screen and (max-width: 1200px) {
+            margin-top: 20px;
         }
         .products-count {
             max-width: 241px;

@@ -102,10 +102,22 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 if (window.innerWidth <= 767) {
-  window.addEventListener("scroll", function () {
-    let scrolled = window.scrollY;
-    let parallax = document.querySelector(".parallax");
+    window.addEventListener("scroll", function() {
+        let scrolled = window.scrollY;
+        let parallax = document.querySelector(".parallax");
 
-    parallax.style.backgroundPosition = `center ${scrolled * 0.5}px`;
-  });
+        parallax.style.backgroundPosition = `center ${scrolled * 0.5}px`;
+    });
 }
+
+const buttons = document.querySelectorAll('.header-button');
+const sections = document.querySelectorAll('section');
+buttons.forEach(button => {
+    button.addEventListener('click', function() {
+        buttons.forEach(b => b.classList.remove('selected'));
+        this.classList.add('selected');
+        sections.forEach(section => section.classList.remove('active'));
+        const sectionId = `${this.id}'-section`;
+        document.getElementById(sectionId).classList.add('active');
+    });
+});

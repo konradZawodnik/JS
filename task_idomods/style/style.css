@@ -19,7 +19,7 @@ html {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    max-width: 100vw;
+    max-width: 1920px;
     position: sticky;
     top: 0;
     width: 100%;
@@ -126,9 +126,33 @@ html {
         }
     }
     .dog {
-        @media screen and (max-width: 1199.99px) {
+        @media screen and (max-width: 820.99px) {
             position: absolute;
             transform: translate(0%, 104%);
+            height: auto;
+            max-width: 75%;
+            width: 100%;
+            z-index: 1;
+        }
+        @media screen and (min-width: 821px) and (max-width: 900.99px) {
+            position: absolute;
+            transform: translate(0%, 97%);
+            height: auto;
+            max-width: 75%;
+            width: 100%;
+            z-index: 1;
+        }
+        @media screen and (min-width: 901px) and (max-width: 920.99px) {
+            position: absolute;
+            transform: translate(0%, 85%);
+            height: auto;
+            max-width: 75%;
+            width: 100%;
+            z-index: 1;
+        }
+        @media screen and (min-width: 921px) and (max-width: 1199.99px) {
+            position: absolute;
+            transform: translate(0%, 70%);
             height: auto;
             max-width: 75%;
             width: 100%;
@@ -145,7 +169,7 @@ html {
     background-size: auto;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 700px;
     align-items: center;
     justify-content: center;
     opacity: 50%;
@@ -193,6 +217,9 @@ html {
         cursor: pointer;
         text-decoration: underline;
     }
+    &:active {
+        text-decoration: underline;
+    }
     @media screen and (max-width: 768px) {
         font-size: 14px;
     }
@@ -201,12 +228,16 @@ html {
     }
 }
 
+.header-button.selected {
+    text-decoration: underline;
+}
+
 .medicine-image {
     height: 100%;
     margin-left: 50px;
     padding-bottom: 100px;
     max-height: 867px;
-    max-width: 42vw;
+    max-width: 582px;
     width: 100%;
     @media screen and (max-width: 769px) {
         margin-left: 0;
@@ -215,7 +246,7 @@ html {
     }
     @media screen and (min-width: 769.01px) and (max-width: 1250px) {
         margin-left: 0;
-        max-width: 42vw;
+        max-width: 450px;
     }
 }
 
@@ -238,10 +269,10 @@ html {
     .arthrohard-logo-in-right-distinction-container {
         height: 100%;
         max-height: 154px;
-        max-width: 50vw;
+        max-width: 730px;
         width: 100%;
         @media screen and (max-width: 1250px) {
-            max-width: 25vw;
+            max-width: 450px;
             @media screen and (max-width: 768px) {
                 display: none;
             }
@@ -285,7 +316,7 @@ html {
         @media screen and (max-width: 1250px) {
             text-align: center;
         }
-        @media screen and (min-width: 768.01px) and (max-width: 1200px) {
+        @media screen and (min-width: 1200px) {
             font-size: 26px;
             white-space: nowrap;
         }
@@ -306,8 +337,7 @@ html {
         justify-content: center;
         flex-direction: column;
         height: 100%;
-        max-height: 40vh;
-        max-width: 50vw;
+        max-width: 730px;
         width: 100%;
         @media screen and (min-width: 768.01px) and (max-width: 1250px) {
             align-items: center;
@@ -391,10 +421,10 @@ html {
             @media screen and (max-width: 480px) {
                 font-size: 18px;
             }
-            @media screen and (min-width: 480.01px) and (max-width: 768px) {
+            @media screen and (max-width: 768px) {
                 font-size: 20px;
             }
-            @media screen and (min-width: 768.01px) and (max-width: 1200px) {
+            @media screen and (max-width: 1200px) {
                 font-size: 26px;
             }
         }
@@ -879,13 +909,16 @@ html {
                             line-height: 61.54px;
                             text-align: center;
                             text-underline-position: from-font;
-                            text-decoration-skip-ink: none;
                             @media screen and (min-width: 768.01px) and (max-width: 1200px) {
                                 font-size: 26px;
                             }
                             @media screen and (max-width: 768px) {
                                 font-size: 20px;
                             }
+                        }
+                        .heading:hover {
+                            cursor: pointer;
+                            text-decoration: underline;
                         }
                         .line {
                             align-items: center;
@@ -949,6 +982,10 @@ html {
                         text-underline-position: from-font;
                         text-decoration-skip-ink: none;
                     }
+                    .heading:hover {
+                        cursor: pointer;
+                        text-decoration: underline;
+                    }
                     .line {
                         align-items: center;
                         border: solid 1px #111111;
@@ -1009,6 +1046,10 @@ html {
                             @media screen and (max-width: 768px) {
                                 font-size: 20px;
                             }
+                        }
+                        .heading:hover {
+                            cursor: pointer;
+                            text-decoration: underline;
                         }
                         .line {
                             align-items: center;
@@ -1087,13 +1128,9 @@ html {
                             font-size: 20px;
                         }
                     }
-                    .line {
-                        align-items: center;
-                        border: solid 1px #111111;
-                        display: flex;
-                        justify-content: center;
-                        margin-bottom: 20px;
-                        width: 100%;
+                    .heading:hover {
+                        cursor: pointer;
+                        text-decoration: underline;
                     }
                     .weight {
                         align-items: center;
@@ -1116,6 +1153,7 @@ html {
                 .package {
                     height: auto;
                     width: auto;
+                    pointer-events: none;
                     position: relative;
                     top: 125px;
                     @media screen and (max-width: 1199.99px) {
@@ -1219,6 +1257,10 @@ html {
                                 line-height: normal;
                             }
                         }
+                        .heading:hover {
+                            cursor: pointer;
+                            text-decoration: underline;
+                        }
                     }
                 }
                 .desktop-ingredient-text-for-devils-claw {
@@ -1290,14 +1332,9 @@ html {
                             font-size: 20px;
                         }
                     }
-                    .line {
-                        align-items: center;
-                        border: solid 1px #111111;
-                        display: flex;
-                        justify-content: center;
-                        margin-bottom: 20px;
-                        max-width: 268.21px;
-                        width: 100%;
+                    .heading:hover {
+                        cursor: pointer;
+                        text-decoration: underline;
                     }
                     .weight {
                         align-items: center;
@@ -1365,14 +1402,9 @@ html {
                             font-size: 20px;
                         }
                     }
-                    .line {
-                        align-items: center;
-                        border: solid 1px #111111;
-                        display: flex;
-                        justify-content: center;
-                        margin-bottom: 20px;
-                        max-width: 268.21px;
-                        width: 100%;
+                    .heading:hover {
+                        cursor: pointer;
+                        text-decoration: underline;
                     }
                     .weight {
                         align-items: center;
@@ -1423,14 +1455,9 @@ html {
                                 font-size: 20px;
                             }
                         }
-                        .line {
-                            align-items: center;
-                            border: solid 1px #111111;
-                            display: flex;
-                            justify-content: center;
-                            margin-bottom: 20px;
-                            max-width: 268.21px;
-                            width: 100%;
+                        .heading:hover {
+                            cursor: pointer;
+                            text-decoration: underline;
                         }
                         .weight {
                             align-items: center;
@@ -1506,14 +1533,9 @@ html {
                             font-size: 20px;
                         }
                     }
-                    .line {
-                        align-items: center;
-                        border: solid 1px #111111;
-                        display: flex;
-                        justify-content: center;
-                        margin-bottom: 20px;
-                        max-width: 268.21px;
-                        width: 100%;
+                    .heading:hover {
+                        cursor: pointer;
+                        text-decoration: underline;
                     }
                     .weight {
                         align-items: center;

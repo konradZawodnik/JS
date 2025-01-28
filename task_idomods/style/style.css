@@ -26,9 +26,6 @@ html {
     z-index: 10;
     min-height: 122px;
     height: 100%;
-    &> :nth-child(4) {
-        font-weight: 700;
-    }
     @media screen and (max-width: 1024px) {
         justify-content: space-between;
     }
@@ -126,33 +123,9 @@ html {
         }
     }
     .dog {
-        @media screen and (max-width: 820.99px) {
+        @media screen and (max-width: 1200px) {
             position: absolute;
             transform: translate(0%, 104%);
-            height: auto;
-            max-width: 75%;
-            width: 100%;
-            z-index: 1;
-        }
-        @media screen and (min-width: 821px) and (max-width: 900.99px) {
-            position: absolute;
-            transform: translate(0%, 97%);
-            height: auto;
-            max-width: 75%;
-            width: 100%;
-            z-index: 1;
-        }
-        @media screen and (min-width: 901px) and (max-width: 920.99px) {
-            position: absolute;
-            transform: translate(0%, 85%);
-            height: auto;
-            max-width: 75%;
-            width: 100%;
-            z-index: 1;
-        }
-        @media screen and (min-width: 921px) and (max-width: 1199.99px) {
-            position: absolute;
-            transform: translate(0%, 70%);
             height: auto;
             max-width: 75%;
             width: 100%;
@@ -200,36 +173,39 @@ html {
     }
 }
 
-.header-button {
-    background: #ffffff;
-    border: none;
-    color: #111111;
-    font-family: Futura PT;
-    font-size: 16px;
-    font-weight: 450;
-    line-height: 20.51px;
-    padding-right: 20px;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-    text-transform: uppercase;
-    &:hover {
+.desktop-menu {
+    @media screen and (max-width: 1024px) {
+        display: none;
+    }
+    padding-left: 50px;
+    .header-button {
+        background: #ffffff;
+        border: none;
+        color: #111111;
+        font-family: Futura PT;
+        font-size: 16px;
+        font-weight: 450;
+        line-height: 20.51px;
+        padding-right: 20px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        text-transform: uppercase;
+        @media screen and (max-width: 768px) {
+            font-size: 14px;
+        }
+        @media screen and (max-width: 480px) {
+            font-size: 12px;
+        }
+    }
+    .header-button.selected {
+        font-weight: bold;
+        text-decoration: underline;
+    }
+    .header-button:hover {
         cursor: pointer;
         text-decoration: underline;
     }
-    &:active {
-        text-decoration: underline;
-    }
-    @media screen and (max-width: 768px) {
-        font-size: 14px;
-    }
-    @media screen and (max-width: 480px) {
-        font-size: 12px;
-    }
-}
-
-.header-button.selected {
-    text-decoration: underline;
 }
 
 .medicine-image {
@@ -917,7 +893,6 @@ html {
                             }
                         }
                         .heading:hover {
-                            cursor: pointer;
                             text-decoration: underline;
                         }
                         .line {
@@ -983,7 +958,6 @@ html {
                         text-decoration-skip-ink: none;
                     }
                     .heading:hover {
-                        cursor: pointer;
                         text-decoration: underline;
                     }
                     .line {
@@ -1048,7 +1022,6 @@ html {
                             }
                         }
                         .heading:hover {
-                            cursor: pointer;
                             text-decoration: underline;
                         }
                         .line {
@@ -1129,7 +1102,6 @@ html {
                         }
                     }
                     .heading:hover {
-                        cursor: pointer;
                         text-decoration: underline;
                     }
                     .weight {
@@ -1191,7 +1163,7 @@ html {
                 }
                 .dog {
                     position: absolute;
-                    bottom: 0px;
+                    bottom: -80px;
                     right: 25px;
                     height: auto;
                     width: 100%;
@@ -1258,7 +1230,6 @@ html {
                             }
                         }
                         .heading:hover {
-                            cursor: pointer;
                             text-decoration: underline;
                         }
                     }
@@ -1333,7 +1304,6 @@ html {
                         }
                     }
                     .heading:hover {
-                        cursor: pointer;
                         text-decoration: underline;
                     }
                     .weight {
@@ -1403,7 +1373,6 @@ html {
                         }
                     }
                     .heading:hover {
-                        cursor: pointer;
                         text-decoration: underline;
                     }
                     .weight {
@@ -1456,7 +1425,6 @@ html {
                             }
                         }
                         .heading:hover {
-                            cursor: pointer;
                             text-decoration: underline;
                         }
                         .weight {
@@ -1534,7 +1502,6 @@ html {
                         }
                     }
                     .heading:hover {
-                        cursor: pointer;
                         text-decoration: underline;
                     }
                     .weight {
@@ -1646,6 +1613,7 @@ html {
         height: 100%;
         justify-content: center;
         margin-bottom: 50px;
+        margin-top: 50px;
         max-height: 46px;
         max-width: 368px;
         width: 100%;
@@ -1654,7 +1622,7 @@ html {
             text-align-last: center;
         }
         @media screen and (max-width: 1200px) {
-            margin-top: 20px;
+            margin-top: 60px;
         }
         .products-count {
             max-width: 241px;
